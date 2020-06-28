@@ -20,7 +20,7 @@ describe "Not having any errors and being all green" do
     it 'raises a TypeError for objects of the wrong type' do
       expect{
         load './lib/a_type_error.rb'
-      }.to_not raise_error
+      }.to_not raise_error(TypeErrorype)
     end
   end
 
@@ -28,7 +28,7 @@ describe "Not having any errors and being all green" do
     it 'raises a ZeroDivisionError for dividing by zero' do
       expect{
         load './lib/a_division_by_zero_error.rb'
-      }.to_not raise_error
+      }.to_not raise_error(ZeroDivisionError)
     end
   end
 end
